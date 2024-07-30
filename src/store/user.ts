@@ -1,6 +1,5 @@
 // initial state
 import { StoreOptions } from "vuex";
-import { ACCESS_ROLE_ENUM } from "@/enum/CommonEnum";
 
 /**
  * 登录用户信息全局状态管理
@@ -9,8 +8,7 @@ export default {
   namespaced: true,
   state: () => ({
     loginUser: {
-      userName: "管理员",
-      userRole: ACCESS_ROLE_ENUM.ADMIN,
+      userName: "未登录",
     },
   }),
   actions: {
