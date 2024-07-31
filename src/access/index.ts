@@ -11,7 +11,9 @@ router.beforeEach(async (to, from, next) => {
   // 获取当前用户
   let user = store.state.user.loginUser;
   // 获取跳转到的目标页面需要的权限 如果没有获取到则默认为不需要任何权限
-  const needAccess = to.meta?.access ?? [ACCESS_ROLE_ENUM.NOT_LOGIN];
+  const needAccess = (to.meta?.access as string[]) ?? [
+    ACCESS_ROLE_ENUM.NOT_LOGIN,
+  ];
   // 尝试自动登录
   if (!user || !user.userRole) {
     // TODO 调用 store 中的 action 方法
@@ -21,7 +23,7 @@ router.beforeEach(async (to, from, next) => {
     });
     user = store.state.user.loginUser;
   }
-  if (needAccess == ACCESS_ROLE_ENUM.NOT_LOGIN) {
+  if (needAccess.includes(ACCESS_ROLE_ENUM.NOT_LOGIN)) {
     // 无论用户是否登录，都允许访问
     next();
     return;
