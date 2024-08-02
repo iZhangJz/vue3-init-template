@@ -2,7 +2,7 @@
 
 ## 前端工程化
 
-***需要在编辑器中打开配置***
+
 - ```ESLint```    自动校验      
 - ```Prettier```  代码美化格式化插件 
 - ```Arco Design```   组件库 
@@ -14,9 +14,9 @@
 - 使用 ```VueX``` 进行**全局状态管理**,管理已经登录的用户信息 
 - **全局权限管理**,对用户进行角色权限校验 
 - 预留了全局项目入口 ```App.vue``` 
-- [基于 swagger 接口文档使用 openAPI 自动生成所有接口代码](https://github.com/ferdikoomen/openapi-typescript-codegen)
-- 接入了**富文本编辑器** ```Markdown``` 编辑器, **支持表格, HighLight 高亮**. [富文本编辑器参考资料](https://github.com/bytedance/bytemd)
-
+- 基于 swagger 接口文档使用 openAPI 自动生成所有接口代码 [官方参考文档](https://github.com/ferdikoomen/openapi-typescript-codegen)
+- 接入了**富文本编辑器** ```Markdown``` 编辑器, **支持表格, HighLight 高亮**. [官方参考文档](https://github.com/bytedance/bytemd)
+- 接入了**代码编辑器** ```Monaco Editor```,支持代码编辑，代码高亮，代码对比等功能 [官方参考文档](https://github.com/microsoft/monaco-editor)
 ## 可能的问题
 - 拉取代码出现错误 ```error Delete cr prettier/prettier``` 尝试使用 ```git config --global core.autocrlf false``` 解决
 
