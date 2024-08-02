@@ -16,6 +16,9 @@ export default {
       // TODO 需要更改为远程获取登录信息
       commit("updateUser", payload);
     },
+    setLoginUser({ commit, state }, payload) {
+      commit("updateUser", payload);
+    },
   },
   mutations: {
     updateUser(state, payload) {
