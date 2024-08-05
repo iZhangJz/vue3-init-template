@@ -76,13 +76,6 @@ onMounted(() => {
   originalModel.onDidChangeContent(() => {
     props.handleChange(toRaw(originalModel.getValue()));
   });
-
-  // 在组件销毁之前释放编辑器资源
-  onBeforeUnmount(() => {
-    if (diffEditor) {
-      diffEditor.dispose();
-    }
-  });
 });
 </script>
 

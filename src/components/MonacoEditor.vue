@@ -4,14 +4,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  onMounted,
-  ref,
-  toRaw,
-  withDefaults,
-  defineProps,
-  onBeforeUnmount,
-} from "vue";
+import { onMounted, ref, toRaw, withDefaults, defineProps } from "vue";
 import * as monaco from "monaco-editor";
 
 /**
@@ -57,13 +50,6 @@ onMounted(() => {
   // 监听值变化
   editor.value.onDidChangeModelContent(() => {
     props.handleChange(toRaw(editor.value).getValue());
-  });
-
-  // 在组件销毁之前释放编辑器资源
-  onBeforeUnmount(() => {
-    if (editor.value) {
-      editor.value.dispose();
-    }
   });
 });
 </script>

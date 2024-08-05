@@ -17,6 +17,9 @@
 - 基于 swagger 接口文档使用 openAPI 自动生成所有接口代码 [官方参考文档](https://github.com/ferdikoomen/openapi-typescript-codegen)
 - 接入了**富文本编辑器** ```Markdown``` 编辑器, **支持表格, HighLight 高亮**. [官方参考文档](https://github.com/bytedance/bytemd)
 - 接入了**代码编辑器** ```Monaco Editor```,支持代码编辑，代码高亮，代码对比等功能 [官方参考文档](https://github.com/microsoft/monaco-editor)
+- 接入了日期处理插件 ```momentjs``` [官方参考文档](https://momentjs.com/docs/#/displaying/format/)
+
+
 ## 可能的问题
 - 拉取代码出现错误 ```error Delete cr prettier/prettier``` 尝试使用 ```git config --global core.autocrlf false``` 解决
 

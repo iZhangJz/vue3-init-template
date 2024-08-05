@@ -11,34 +11,42 @@
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>
-      <a-layout-footer class="footer">Footer</a-layout-footer>
+      <a-layout-footer class="footer"
+        ><a-space>
+          <icon-github size="16px" />
+          <a
+            href="https://github.com/iZhangJz"
+            target="_blank"
+            style="text-decoration: none; color: black"
+          >
+            GitHub : iZhangJZ
+          </a>
+        </a-space></a-layout-footer
+      >
     </a-layout>
   </div>
 </template>
 
 <style scoped>
-#layout {
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
-#layout .header {
+.content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto 28px;
+  padding: 24px;
+  background: linear-gradient(to right, #fefefe, #ffffff);
+}
+
+.header {
   margin-bottom: 16px;
   box-shadow: #eee 1px 1px 5px;
-}
-
-#layout .content {
-  background: linear-gradient(to right, #eee, #fff);
-  margin-bottom: 16px;
-  padding: 20px;
-}
-
-#layout .footer {
-  background: #efefef;
-  padding: 16px;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
 }
 </style>
 <script setup lang="ts">
